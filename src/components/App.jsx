@@ -34,7 +34,13 @@ export const App = () => {
   }
 
   const loadMore = () => {
-    setPage(prevState => (prevState + 1)); 
+    setPage(prevState => (prevState + 1));
+    setTimeout(() => {
+      window.scrollBy({
+        top: 520,
+        behavior: "smooth",
+      });
+    }, 400)
   }
 
   const onFormSubmit = ({ searchValue }, { resetForm }) => {
